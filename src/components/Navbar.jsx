@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-[#D6E3E1] min-h-screen flex flex-col items-center p-4 sm:p-8">
+    <div className="bg-[#D6E3E1]  flex flex-col items-center p-4 sm:p-8 ">
       <nav className="w-full max-w-7xl flex items-center justify-between p-4 bg-white shadow-lg rounded-full">
         {/* Logo Section (Far Left) */}
         <div className="flex items-center space-x-2">

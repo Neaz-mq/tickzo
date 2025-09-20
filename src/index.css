@@ -9,3 +9,27 @@ body {
   color: #1f2937; /* Tailwind gray-800 for dark text on light background */
   background-color: #ffffff; /* White background */
 }
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px; /* width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000; /* black scrollbar handle */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333; /* dark gray on hover */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #f1f1f1; /* thumb | track */
+}
