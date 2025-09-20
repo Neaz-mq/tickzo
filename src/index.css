@@ -6,5 +6,6 @@
 /* Apply globally */
 body {
   font-family: 'Lato', system-ui, sans-serif;
-  color: #ffffff;
+  color: #1f2937; /* Tailwind gray-800 for dark text on light background */
+  background-color: #ffffff; /* White background */
 }

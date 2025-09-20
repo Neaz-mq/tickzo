@@ -1,4 +1,3 @@
-// Loader.jsx
 import { useEffect } from "react";
 
 export default function Loader({ setLoading }) {
@@ -9,20 +8,32 @@ export default function Loader({ setLoading }) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-      <div
-        className="loader w-[120px] h-[60px] rounded-t-[200px] rounded-tl-[200px] rounded-tr-[200px]"
-        style={{
-          maskImage: `repeating-radial-gradient(farthest-side at bottom, #0000 0, #000 1px 12%, #0000 calc(12% + 1px) 20%)`,
-          WebkitMaskImage: `repeating-radial-gradient(farthest-side at bottom, #0000 0, #000 1px 12%, #0000 calc(12% + 1px) 20%)`,
-          background: `radial-gradient(farthest-side at bottom, #514b82 0 95%, #0000 0) bottom / 0% 0% no-repeat #ddd`,
-          animation: "l10 2s infinite steps(6)",
-        }}
-      ></div>
+      {/* Loader container */}
+      <div className="loader w-12 aspect-square grid relative">
+        {/* Loader pseudo-elements translated into divs */}
+        <div className="absolute inset-0 before:content-[''] after:content-[''] before:grid-area-1/1 after:grid-area-1/1"></div>
+      </div>
 
+      {/* Inline styles for animation */}
       <style>
         {`
-          @keyframes l10 {
-            100% { background-size: 120% 120%; }
+          .loader::before,
+          .loader::after {
+            content: "";
+            grid-area: 1/1;
+            --c: no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+            background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+            background-size: 12px 12px;
+            animation: l12 1s infinite;
+          }
+          .loader::before {
+            margin: 4px;
+            filter: hue-rotate(45deg);
+            background-size: 8px 8px;
+            animation-timing-function: linear;
+          }
+          @keyframes l12 { 
+            100% { transform: rotate(.5turn); }
           }
         `}
       </style>
