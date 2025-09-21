@@ -1,0 +1,13 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* shift by half since we duplicate */
+  }
+}
+
+.scrolling-content {
+  display: inline-flex;
+  animation: marquee 18s linear infinite;
+}

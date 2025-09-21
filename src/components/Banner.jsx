@@ -8,7 +8,7 @@ const Banner = () => {
 
   return (
     <div
-      className="relative w-full md:min-h-screen bg-cover bg-center flex flex-col items-center justify-center  text-center  overflow-hidden bg-[#D6E3E1] pt-10 md:pt-0     "
+      className="relative w-full  bg-cover bg-center flex flex-col items-center justify-center text-center overflow-hidden bg-[#D6E3E1] pt-10 md:pt-20"
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
       <div className="relative z-10 flex flex-col items-center justify-center">
@@ -22,6 +22,7 @@ const Banner = () => {
         <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 mb-16 max-w-4xl w-full">
           <div className="flex items-center space-x-4">
             <div className="bg-gray-900 text-white rounded-full p-3 shadow-lg">
+              {/* battery icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -46,8 +47,10 @@ const Banner = () => {
               </p>
             </div>
           </div>
+
           <div className="flex items-center space-x-4">
             <div className="bg-gray-900 text-white rounded-full p-3 shadow-lg">
+              {/* water & dust icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -80,6 +83,7 @@ const Banner = () => {
         </button>
       </div>
 
+      {/* watch image */}
       <img
         src={watchImage}
         alt="Smartwatch"
