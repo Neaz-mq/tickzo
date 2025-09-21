@@ -4,6 +4,7 @@ import Loader from "./components/Loader";
 import Banner from "./components/Banner";
 import Poster from "./components/Poster/Poster";
 import CursorMagnet from "./components/CursorMagnet/CursorMagnet";
+import About from "./components/About";
  // import new cursor
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <main>
             <Banner />
             <Poster />
+            <About />
           </main>
         </div>
       )}
