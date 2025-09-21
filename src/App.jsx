@@ -6,6 +6,7 @@ import Poster from "./components/Poster/Poster";
 import CursorMagnet from "./components/CursorMagnet/CursorMagnet";
 import About from "./components/About";
 import Product from "./components/Product";
+import Choose from "./components/Choose";
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <Poster />
             <About />
             <Product />
+            <Choose />
           </main>
         </div>
       )}

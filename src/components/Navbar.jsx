@@ -40,13 +40,13 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            to="blog"
+            to="product"
             smooth={true}
             offset={-80}
             duration={500}
             className="cursor-pointer text-gray-700 hover:text-gray-900 transition-colors duration-200"
           >
-            Blog
+            Product
           </Link>
           <Link
             to="contact"
@@ -132,14 +132,14 @@ const Navbar = () => {
           About Us
         </Link>
         <Link
-          to="blog"
+          to="product"
           smooth={true}
           offset={-80}
           duration={500}
           onClick={() => setIsMenuOpen(false)}
           className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer"
         >
-          Blog
+          Product
         </Link>
         <Link
           to="contact"

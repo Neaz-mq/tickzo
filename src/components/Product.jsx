@@ -78,10 +78,10 @@ const ProductCarousel = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#D6E3E1] p-8">
+    <div id="" className="flex flex-col items-center justify-center  bg-[#D6E3E1] p-28">
       {/* Heading */}
       <div className="text-center mb-12">
-        <p className="text-sm font-medium text-gray-700 uppercase tracking-widest">
+        <p className="text-sm font-semibold tracking-wide text-gray-700 uppercase">
           Our Product
         </p>
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mt-2 leading-tight">
