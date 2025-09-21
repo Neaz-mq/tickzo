@@ -5,7 +5,8 @@ import Banner from "./components/Banner";
 import Poster from "./components/Poster/Poster";
 import CursorMagnet from "./components/CursorMagnet/CursorMagnet";
 import About from "./components/About";
- // import new cursor
+import Product from "./components/Product";
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ export default function App() {
             <Banner />
             <Poster />
             <About />
+            <Product />
           </main>
         </div>
       )}
