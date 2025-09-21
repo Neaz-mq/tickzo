@@ -25,7 +25,7 @@ const features = [
 
 const About = () => {
   return (
-    <div className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <div id="about" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-sm font-semibold tracking-wide text-gray-700 uppercase">
           About Us

@@ -1,47 +1,74 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div className="bg-[#D6E3E1]  flex flex-col items-center p-4 sm:p-8 -mb-2 ">
+    <div className="bg-[#D6E3E1] flex flex-col items-center p-4 sm:p-8 -mb-2">
       <nav className="w-full max-w-7xl flex items-center justify-between p-4 bg-white shadow-lg rounded-full">
-        {/* Logo Section (Far Left) */}
+        {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
             src="/logo.jpg"
             alt="Tickzo Logo"
-            width={32}
-            height={32}
             className="h-8 w-8 rounded-full"
           />
           <span className="text-2xl font-bold">Tickzo</span>
         </div>
 
-        {/* Desktop Menu Links (Centered) */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 items-center justify-center space-x-6">
-          <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors duration-200">Home</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors duration-200">About Us</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors duration-200">Blog</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors duration-200">Contact Us</a>
+          <Link
+            to="home"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="cursor-pointer text-gray-700 hover:text-gray-900 transition-colors duration-200"
+          >
+            Home
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="cursor-pointer text-gray-700 hover:text-gray-900 transition-colors duration-200"
+          >
+            About Us
+          </Link>
+          <Link
+            to="blog"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="cursor-pointer text-gray-700 hover:text-gray-900 transition-colors duration-200"
+          >
+            Blog
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="cursor-pointer text-gray-700 hover:text-gray-900 transition-colors duration-200"
+          >
+            Contact Us
+          </Link>
         </div>
 
-        {/* Purchase Button & Mobile Menu Toggle (Far Right) */}
+        {/* Purchase & Mobile Menu */}
         <div className="flex items-center space-x-4">
-          {/* Desktop Purchase Button */}
           <button className="hidden md:block px-6 py-3 bg-black text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-200">
             Purchase Now
           </button>
-          
-          {/* Mobile-only hamburger menu toggle */}
+
           <div className="flex md:hidden">
             <button onClick={toggleMenu} className="focus:outline-none">
               {isMenuOpen ? (
-                // Close icon (X)
+                // Close icon
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -57,7 +84,7 @@ const Navbar = () => {
                   />
                 </svg>
               ) : (
-                // Open icon (Hamburger)
+                // Hamburger icon
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -78,13 +105,53 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Dropdown Menu */}
-      <div className={`w-full max-w-7xl flex-col items-center bg-white shadow-lg rounded-xl mt-4 p-4 md:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}>
-        <a href="#" className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
-        <a href="#" className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg">About Us</a>
-        <a href="#" className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Blog</a>
-        <a href="#" className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Contact Us</a>
-        {/* The Purchase Now button is now inside the dropdown menu */}
+      {/* Mobile Menu */}
+      <div
+        className={`w-full max-w-7xl flex-col items-center bg-white shadow-lg rounded-xl mt-4 p-4 md:hidden ${
+          isMenuOpen ? "flex" : "hidden"
+        }`}
+      >
+        <Link
+          to="home"
+          smooth={true}
+          offset={-80}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer"
+        >
+          Home
+        </Link>
+        <Link
+          to="about"
+          smooth={true}
+          offset={-80}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer"
+        >
+          About Us
+        </Link>
+        <Link
+          to="blog"
+          smooth={true}
+          offset={-80}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer"
+        >
+          Blog
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          offset={-80}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+          className="w-full text-center py-2 text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer"
+        >
+          Contact Us
+        </Link>
+
         <button className="w-full mt-4 px-6 py-3 bg-black text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-200">
           Purchase Now
         </button>
