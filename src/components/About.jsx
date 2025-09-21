@@ -30,11 +30,11 @@ const About = () => {
         <p className="text-sm font-semibold tracking-wide text-gray-700 uppercase">
           About Us
         </p>
-        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 text-center">
+        <h1 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 text-center leading-snug sm:leading-tight">
           Built with precision and passion, our
-          <br />
+          <br className="hidden sm:block" />
           smartwatches combine advanced
-          <br />
+          <br className="hidden md:block" />
           feature
         </h1>
 

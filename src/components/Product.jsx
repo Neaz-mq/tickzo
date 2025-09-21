@@ -106,6 +106,12 @@ const ProductCarousel = () => {
           }}
           onSwiper={(swiper) => (swiperRef.current = swiper)} // save swiper instance
           className="pb-12"
+          breakpoints={{
+            320: { slidesPerView: 1 },   // Mobile
+            640: { slidesPerView: 2 },   // Small tablets
+            1024: { slidesPerView: 3 },  // Tablets / small desktops
+            1280: { slidesPerView: 4 },  // Large desktops
+          }}
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
