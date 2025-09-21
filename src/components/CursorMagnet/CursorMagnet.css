@@ -1,0 +1,33 @@
+.cursor-lens {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.cursor-lens--active {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cursor-lens-zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Use the webpage as the background image */
+  background-image: url();
+  background-repeat: no-repeat;
+  
+  /* Invert all colors within the lens */
+  filter: invert(1);
+}
