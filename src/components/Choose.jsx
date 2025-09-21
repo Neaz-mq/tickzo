@@ -17,7 +17,7 @@ const staggerContainer = {
 const Choose = () => {
   return (
     <div className="bg-gray-100 py-24 antialiased text-gray-800 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-2">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
         {/* Title */}
         <motion.div
           className="text-center mb-12"
