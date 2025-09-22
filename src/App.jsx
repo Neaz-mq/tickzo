@@ -7,6 +7,7 @@ import CursorMagnet from "./components/CursorMagnet/CursorMagnet";
 import About from "./components/About";
 import Product from "./components/Product";
 import Choose from "./components/Choose";
+import Best from "./components/Best";
 
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
             <About />
             <Product />
             <Choose />
+            <Best />
           </main>
         </div>
       )}
