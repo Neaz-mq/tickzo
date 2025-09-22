@@ -2,7 +2,7 @@ import React from "react";
 
 const Benefits = () => {
   return (
-    <section className="w-full bg-gray-50 py-16 px-6">
+    <section className="w-full bg-gray-50 py-24 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         {/* ===== TOP SECTION ===== */}
         <div className="flex flex-col lg:flex-row gap-12">

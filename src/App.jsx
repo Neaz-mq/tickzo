@@ -13,6 +13,8 @@ import Best from "./components/Best";
 import Benefits from "./components/Benefits";
 import ScrollToTop from "./components/ScrollToTop";
 import Fact from "./components/Fact";
+import Track from "./components/Track";
+import Partners from "./components/Partners";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -54,6 +56,8 @@ export default function App() {
             <Best />
             <Benefits />
             <Fact />
+            <Track />
+            <Partners />
           </main>
            <ScrollToTop /> {/* Arrow button */}
         </div>
