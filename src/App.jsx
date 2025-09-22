@@ -12,6 +12,7 @@ import Choose from "./components/Choose";
 import Best from "./components/Best";
 import Benefits from "./components/Benefits";
 import ScrollToTop from "./components/ScrollToTop";
+import Fact from "./components/Fact";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ export default function App() {
             <Choose />
             <Best />
             <Benefits />
+            <Fact />
           </main>
            <ScrollToTop /> {/* Arrow button */}
         </div>
