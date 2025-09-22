@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Fact from "./components/Fact";
 import Track from "./components/Track";
 import Partners from "./components/Partners";
+import Contact from "./components/Contact";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -58,6 +59,7 @@ export default function App() {
             <Fact />
             <Track />
             <Partners />
+            <Contact />
           </main>
            <ScrollToTop /> {/* Arrow button */}
         </div>

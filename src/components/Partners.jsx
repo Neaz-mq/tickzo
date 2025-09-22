@@ -53,7 +53,7 @@ const Partners = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.157.44l-1.416 2.12a1.5 1.5 0 01-1.41 1.05c-1.871-.24-3.674-1.066-5.183-2.575S4.384 10.966 4.144 9.095a1.5 1.5 0 011.05-1.416l2.12-1.416c.385-.255.55-.717.44-1.157L8.91 4.492c-.125-.509-.575-.86-1.091-.852h-1.372A2.25 2.25 0 003 4.875v2.25z" />
                 </svg>
                 <span className="text-xs">Need Help!</span>
-                <p className="text-xs">+91- 123 592 357</p>
+                <p className="text-xs">+88- 017 85286 936</p>
               </div>
               <button className="px-6 py-3 rounded-full bg-gray-900 text-white font-semibold shadow-sm transition-transform transform hover:scale-105">
                 Get Started
