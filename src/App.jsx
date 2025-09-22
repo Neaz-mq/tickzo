@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+
 import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
 import Banner from "./components/Banner";
@@ -8,17 +10,39 @@ import About from "./components/About";
 import Product from "./components/Product";
 import Choose from "./components/Choose";
 import Best from "./components/Best";
-
+import Benefits from "./components/Benefits";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2, // default scrolling duration
+      smooth: true,
+      smoothTouch: false, // keep native feel on mobile
+      lerp: 0.1, // inertia (lower = smoother, higher = snappier)
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy(); // cleanup on unmount
+    };
+  }, []);
 
   return (
     <>
       {loading && <Loader setLoading={setLoading} />}
       {!loading && (
         <div className="relative">
-          <CursorMagnet />  
+          <CursorMagnet />
           <Navbar />
           <main>
             <Banner />
@@ -27,7 +51,9 @@ export default function App() {
             <Product />
             <Choose />
             <Best />
+            <Benefits />
           </main>
+           <ScrollToTop /> {/* Arrow button */}
         </div>
       )}
     </>
