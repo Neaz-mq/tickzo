@@ -16,6 +16,7 @@ import Fact from "./components/Fact";
 import Track from "./components/Track";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -62,6 +63,7 @@ export default function App() {
             <Contact />
           </main>
            <ScrollToTop /> {/* Arrow button */}
+           <Footer />
         </div>
       )}
     </>

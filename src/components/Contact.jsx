@@ -65,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div id="contact" className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-24">
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-12">
