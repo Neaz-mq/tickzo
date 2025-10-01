@@ -23,10 +23,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_hvs27r7",       // Replace with your EmailJS service ID
-        "template_a72ajwj",      // Replace with your EmailJS template ID
+        "service_hvs27r7",
+        "template_a72ajwj",
         formRef.current,
-        "UYc-cRy2E2HxVAyKv"     // Replace with your EmailJS public key
+        "UYc-cRy2E2HxVAyKv"
       )
       .then(
         () => {
@@ -78,18 +78,21 @@ const Contact = () => {
               Connect with us, support <br /> for every need
             </h1>
             <p className="text-gray-600 mb-8">
-              Have questions or need assistance? Our team is always ready to help
-              you with quick and reliable support.
+              Have questions or need assistance? Our team is always ready to
+              help you with quick and reliable support.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-gray-200 rounded-2xl p-6 flex flex-col items-start shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
                 <p className="text-sm text-gray-600">
-                  1234 Horizon Avenue, Suite 500, Bogura, BN 94103 - Located in the heart of the tech district.
+                  1234 Horizon Avenue, Suite 500, Bogura, BN 94103 - Located in
+                  the heart of the tech district.
                 </p>
               </div>
               <div className="bg-gray-200 rounded-2xl p-6 flex flex-col items-start shadow-sm">
-                <h4 className="font-semibold text-gray-900 mb-1">Contact us!</h4>
+                <h4 className="font-semibold text-gray-900 mb-1">
+                  Contact us!
+                </h4>
                 <p className="text-sm text-gray-600">+88 - 017 8528 6936</p>
               </div>
               <div className="bg-gray-200 rounded-2xl p-6 flex flex-col items-start shadow-sm">
@@ -192,6 +195,18 @@ const Contact = () => {
                 className="w-full bg-white p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900"
                 required
               ></textarea>
+              {/* Hidden Date & Time */}
+              <input
+                type="hidden"
+                name="date"
+                value={new Date().toLocaleDateString()}
+              />
+              <input
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleTimeString()}
+              />
+
               <button
                 type="submit"
                 className="w-full bg-gray-900 text-white font-semibold py-3 rounded-xl shadow-md hover:bg-gray-800 transition duration-300"
